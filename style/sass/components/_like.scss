@@ -1,0 +1,20 @@
+@import "./../base/variable";
+
+
+.like__container i {
+    font-size: 27px;
+    color: transparent;
+    -webkit-text-stroke: 2.5px rgb(0, 0, 0);
+    background-clip: text;
+    transition: all 1s ease;
+    cursor: pointer;
+
+}
+
+
+.like__container i:hover {
+    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+    -webkit-text-stroke: 0px rgb(0, 0, 0);
+    -webkit-text-stroke-color: transparent;
+
+}

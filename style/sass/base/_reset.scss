@@ -1,0 +1,24 @@
+@import "./variable";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    height: 0px;
+    transform: scale(0);
+    animation: showcontent 400ms ease forwards 3s;
+
+}

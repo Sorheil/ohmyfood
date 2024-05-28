@@ -1,0 +1,52 @@
+@import "./../base/variable";
+//component loading spinner
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid $primary-color;
+    border-top-color: $background-color;
+    animation: spin 1s linear infinite;
+
+    &__container {
+        height: 100vh;
+        animation: hidespinner 3s linear forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hidespinner {
+    0% {}
+
+    100% {
+
+        display: none;
+    }
+}
+
+@keyframes showcontent {
+    0% {
+        // transform: scale(0);
+        height: 0px;
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: scale(1);
+        height: auto;
+        transform: (0px)
+    }
+}
