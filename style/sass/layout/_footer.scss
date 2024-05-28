@@ -33,3 +33,9 @@ footer {
         }
     }
 }
+
+@media (min-width:768px) {
+    footer {
+        align-items: center;
+    }
+}

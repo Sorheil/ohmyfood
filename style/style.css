@@ -97,6 +97,7 @@ header .btn__back {
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.314);
+  cursor: pointer;
 }
 .step:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.488);
@@ -418,6 +419,7 @@ header .btn__back {
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.314);
+  cursor: pointer;
 }
 .step:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.488);
@@ -549,6 +551,12 @@ footer .footer__link a {
   display: block;
   width: auto;
   color: white;
+}
+
+@media (min-width: 768px) {
+  footer {
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
