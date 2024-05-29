@@ -1,5 +1,4 @@
 @import "./../base/variable";
-//component loading spinner
 
 .spinner {
     width: 100px;
@@ -11,10 +10,10 @@
 
     &__container {
         height: 100vh;
-        animation: hidespinner 3s linear forwards;
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: hidespinner 100ms linear forwards 3s;
     }
 }
 
@@ -29,24 +28,11 @@
 }
 
 @keyframes hidespinner {
-    0% {}
-
-    100% {
-
-        display: none;
-    }
-}
-
-@keyframes showcontent {
     0% {
-        // transform: scale(0);
-        height: 0px;
-        transform: translateY(100px);
+        transform: scale(1);
     }
 
     100% {
-        transform: scale(1);
-        height: auto;
-        transform: (0px)
+        transform: scale(0);
     }
 }

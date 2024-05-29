@@ -8,7 +8,6 @@
 
 body {
   background-color: #EAEAEA;
-  opacity: 1;
 }
 
 a {
@@ -17,11 +16,23 @@ a {
 }
 
 .content {
-  height: 0px;
+  position: absolute;
+  animation: showcontent 200ms ease forwards 3.2s;
   transform: scale(0);
-  animation: showcontent 400ms ease forwards 3s;
 }
 
+@keyframes showcontent {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: scale(1);
+    top: 0;
+    left: 0;
+    transform: translateY(0px);
+    width: 100%;
+  }
+}
 .spinner {
   width: 100px;
   height: 100px;
@@ -32,10 +43,10 @@ a {
 }
 .spinner__container {
   height: 100vh;
-  animation: hidespinner 3s linear forwards;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: hidespinner 100ms linear forwards 3s;
 }
 
 @keyframes spin {
@@ -47,19 +58,11 @@ a {
   }
 }
 @keyframes hidespinner {
-  100% {
-    display: none;
-  }
-}
-@keyframes showcontent {
   0% {
-    height: 0px;
-    transform: translateY(100px);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1);
-    height: auto;
-    transform: 0px;
+    transform: scale(0);
   }
 }
 header {
