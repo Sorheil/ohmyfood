@@ -349,10 +349,10 @@ header .btn__back {
 .like__container i {
   font-size: 27px;
   color: transparent;
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom, #FF79DA, #997bbd);
+  background-image: linear-gradient(45deg, #FF79DA, #997bbd);
   background-repeat: no-repeat;
   cursor: pointer;
   background-position: 0 27px;
@@ -368,6 +368,7 @@ header .btn__back {
   }
   100% {
     background-position: 0 0;
+    -webkit-text-stroke: 0px transparent;
   }
 }
 .restaurant {
