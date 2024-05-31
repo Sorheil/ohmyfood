@@ -16,9 +16,7 @@
 
     &:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.488);
-    }
-
-    &--final {
+        color: $primary-color;
         background-color: #F5EDFF;
     }
 
@@ -45,9 +43,7 @@
         color: $secondary-text-color;
         margin-right: 20px;
 
-        &--final {
-            color: $primary-color;
-        }
+
     }
 }
 

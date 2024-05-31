@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -104,8 +106,7 @@ header .btn__back {
 }
 .step:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.488);
-}
-.step--final {
+  color: #997bbd;
   background-color: #F5EDFF;
 }
 .step__number-icon {
@@ -128,9 +129,6 @@ header .btn__back {
   font-size: 20px;
   color: #494949;
   margin-right: 20px;
-}
-.step__icon--final {
-  color: #997bbd;
 }
 
 @media (min-width: 768px) {
@@ -263,11 +261,16 @@ header .btn__back {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 93%;
 }
 .entry__side {
   grid-row: 2/3;
   grid-column: 1/2;
   color: #494949;
+  width: 93%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .entry__price {
   margin-left: auto;
@@ -346,18 +349,27 @@ header .btn__back {
 .like__container i {
   font-size: 27px;
   color: transparent;
-  -webkit-text-stroke: 2.5px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
   background-clip: text;
-  transition: all 1s ease;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, #FF79DA, #997bbd);
+  background-repeat: no-repeat;
   cursor: pointer;
+  background-position: 0 27px;
 }
 
 .like__container i:hover {
-  background-image: linear-gradient(to right, #997bbd, #FF79DA);
-  -webkit-text-stroke: 0px rgb(0, 0, 0);
-  -webkit-text-stroke-color: transparent;
+  animation: fill 700ms ease forwards;
 }
 
+@keyframes fill {
+  0% {
+    background-position: 0 27px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .restaurant {
   height: 250px;
   position: relative;
@@ -426,8 +438,7 @@ header .btn__back {
 }
 .step:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.488);
-}
-.step--final {
+  color: #997bbd;
   background-color: #F5EDFF;
 }
 .step__number-icon {
@@ -450,9 +461,6 @@ header .btn__back {
   font-size: 20px;
   color: #494949;
   margin-right: 20px;
-}
-.step__icon--final {
-  color: #997bbd;
 }
 
 @media (min-width: 768px) {
@@ -482,7 +490,7 @@ header .btn__back {
   row-gap: 30px;
 }
 .menu__restaurant-title {
-  font-size: 30px;
+  font-size: 15px;
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
   display: flex;

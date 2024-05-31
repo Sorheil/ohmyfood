@@ -27,12 +27,17 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        width: 93%;
     }
 
     &__side {
         grid-row: 2/3;
         grid-column: 1/2;
         color: $secondary-text-color;
+        width: 93%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__price {

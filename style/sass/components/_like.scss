@@ -4,17 +4,27 @@
 .like__container i {
     font-size: 27px;
     color: transparent;
-    -webkit-text-stroke: 2.5px rgb(0, 0, 0);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
     background-clip: text;
-    transition: all 1s ease;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
+    background-repeat: no-repeat;
     cursor: pointer;
+    background-position: 0 27px;
+
 
 }
 
-
 .like__container i:hover {
-    background-image: linear-gradient(to right, $primary-color, $secondary-color);
-    -webkit-text-stroke: 0px rgb(0, 0, 0);
-    -webkit-text-stroke-color: transparent;
+    animation: fill 700ms ease forwards;
+}
 
+@keyframes fill {
+    0% {
+        background-position: 0 27px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
